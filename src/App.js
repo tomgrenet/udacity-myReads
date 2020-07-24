@@ -1,22 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Shelves from './components/Shelves'
 
-///////////////////////////////////////////////////////////
-//1. BEFORE YOU START, CHECK CHILD BRANCHES IS USED ON GITHUB
-//2. mockup software: https://codingsans.com/blog/mockup-tools
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//////////////////////////////////////////////////////////
+class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        My Reads project
-      </header>
-    </div>
-  );
+  state = {
+    books: [
+      { id:'1', title: 'Une Vie', author:'Maupassant', status: 'Reading'},
+      { id:'2', title: 'Tintin', author:'Herge', status: 'Wanna read'},
+      { id:'3', title: 'Lords of the Rings', author:'Tolkien', status: 'Reading'},
+    ]
+  }
+
+  
+  render() {
+
+    return (
+      <div className="App">
+        <header className="App-header">
+          My Reads project
+        </header>
+          <Shelves
+            books = {this.state.books} />
+      </div>
+    );
+
+  }
+  
 }
+
+
+
 
 export default App;

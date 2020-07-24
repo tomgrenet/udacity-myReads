@@ -1,0 +1,8 @@
+.book {
+    color: black;
+    width: 200px;
+    border: 3px solid #0000ff;
+    display: inline-block;
+    padding: 0;
+    margin: 10px;
+}
